@@ -77,4 +77,84 @@ body {
     grid-area: footer;
     width: 100%;
     height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px auto auto;
+    grid-template-areas: 
+    'top-left top-center top-right'
+    'like like like'
+    'comment comment comment';
+}
+
+.top-left {
+    grid-area: top-left;
+    display: flex;
+}
+
+.heart {
+    width: 100%;
+    height: 100%;
+    background: url(./heart.png) center center no-repeat;
+}
+
+.dialog {
+    width: 100%;
+    height: 100%;
+    background: url(./dialog.png) center center no-repeat;
+}
+
+.DM {
+    width: 100%;
+    height: 100%;
+    background: url(./DM.png) center center no-repeat;
+}
+
+.top-center {
+    grid-area: top-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-right {
+    grid-area: top-right;
+    display: flex;
+}
+
+.shared {
+    width: 100%;
+    height: 100%;
+    background: url(./shared.png) 85% center no-repeat;
+}
+
+.like {
+    grid-area: like;
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+.comment {
+    grid-area: comment;
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+.top-center ul {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    list-style: none;
+    padding: 0;
+}
+
+.top-center ul li:first-child {
+    background-color: rgb(0, 174, 255);
+}
+
+.top-center ul li {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: lightgray;
 }
