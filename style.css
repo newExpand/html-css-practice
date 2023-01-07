@@ -92,10 +92,29 @@ body {
     display: flex;
 }
 
-.heart {
+
+.heart-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background: url(./heart.png) center center no-repeat;
+}
+
+#heart {
+    width: 55%;
+    height: 55%;
+}
+
+#heart:hover {
+    color: red;
+}
+
+#fill-heart {
+    display: none;
+    width: 55%;
+    height: 55%;
+    fill: red;
 }
 
 .dialog {
