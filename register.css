@@ -1,0 +1,17 @@
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: whitesmoke;
+}
+
+#formSection {
+    max-width: 400px;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #c6c6c6;
+}
