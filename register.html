@@ -37,10 +37,11 @@
                 </div>
             </div>
             <form class="form">
-                <input class="input-style" type="text" placeholder="휴대폰 번호 또는 이메일 주소">
-                <input class="input-style" type="text" placeholder="성명">
-                <input class="input-style" type="text" placeholder="사용자 이름">
-                <input class="input-style" type="text" placeholder="비밀번호">
+                <input class="input-style" type="email" placeholder="이메일 주소" required>
+                <input class="input-style" type="text" placeholder="성명" required>
+                <input class="input-style" type="text" placeholder="사용자 이름" required>
+                <input class="input-style" type="password" placeholder="비밀번호" required minlength="8">
+                <input class="input-style" type="password" placeholder="비밀번호 확인" required>
                 <input type="submit" value="가입">
             </form>
         </section>
