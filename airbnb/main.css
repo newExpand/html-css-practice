@@ -1,0 +1,151 @@
+.wrap {
+    background-color: white;
+    width: 80%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+header {
+    position: relative;
+    background-color: black;
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+.corona-link {
+    color: white;
+    font-weight: bold;
+}
+
+.gnb {
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    'logo gnb-menu menu'
+    'search search search';
+}
+
+.logo {
+    grid-area: logo;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.gnb-menu {
+    grid-area: gnb-menu;
+    display: flex;
+    align-items: center;
+}
+
+.gnb-menu ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+    margin: 0 auto;
+}
+
+.gnb-menu ul .active::before {
+    content: "";
+    width: 15px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.gnb-menu ul li {
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.gnb-menu ul li:not(.active):hover {
+    color: gray;
+}
+
+.gnb-menu ul li:not(.active):hover::before {
+    content: "";
+    width: 5px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    width: 80%;
+    margin-left: 20%;
+}
+
+.menu-hover {
+    padding: 10px 10px;
+    border-radius: 30px;
+}
+
+.menu-hover:hover {
+    background-color: rgba(172, 172, 172, 0.3);
+}
+
+.profile {
+    background-color: white;
+    color: gray;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.search {
+    grid-area: search;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.search-ul {
+    display: flex;
+    background-color: white;
+    color: black;
+    border-radius: 50px;
+}
+
+.search-ul li {
+    width: 25%;
+    position: relative;
+    padding: 20px 50px 20px 20px;
+    font-weight: bold;
+    text-align: left;
+    border-radius: 50px;
+}
+
+.search-ul li:hover {
+    background-color: lightgray;
+}
+
+.search-ul li + li::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 1px;
+    height: calc(100% - calc(20px * 2));
+    background-color: lightgray;
+}
+
+.search-ul li span {
+    color: gray;
+    font-size: 12px;
+    font-weight: normal;
+}
