@@ -3,6 +3,13 @@
     width: 80%;
     max-width: 1920px;
     margin: 0 auto;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 767px) {
+    .wrap {
+        width: 90%;
+    }
 }
 
 .black-bg {
@@ -243,10 +250,13 @@ header {
 .city {
     display: flex;
     width: 100%;
+    overflow: auto;
 }
 
 .card {
     width: 25%;
+    min-width: 250px;
+    cursor: pointer;
 }
 
 .card + .card {
@@ -275,4 +285,99 @@ header {
 
 .card figcaption span {
     font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+    .city {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    
+    .city::-webkit-scrollbar {
+        display: none;
+    }
+
+    .card {
+        width: 25%;
+        min-width: 250px;
+        cursor: pointer;
+    }
+    
+    .card + .card {
+        margin-left: 15px;
+    }
+    
+    .card figcaption p {
+        font-size: 1.3rem;
+        line-height: 2rem;
+        padding-bottom: 0.5em;
+    }
+}
+
+/* expression */
+
+.expression {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 25px;
+    grid-template-areas: 
+    'heading heading'
+    'div1 div2';
+
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 576px) {
+    .expression {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 15px;
+        grid-template-areas: 
+        'heading'
+        'div1'
+        'div2';
+    }
+}
+
+.heading {
+    grid-area: heading;
+}
+
+.photoDiv {
+    /* width: 100%; */
+    height: calc(700px - calc(60px * 2));
+    padding: 60px;
+    border-radius: 14px;
+}
+
+.photoDiv:nth-of-type(1) {
+    background: url(./img/travel1.jpg) center center no-repeat ;
+    background-size: cover;
+}
+
+.photoDiv:nth-of-type(2) {
+    background: url(./img/travel2.jpg) center center no-repeat ;
+    background-size: cover;
+}
+
+.photoDiv p {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.photoDiv button {
+    color: black;
+    font-weight: bold;
+    border: none;
+    background-color: white;
+    padding: 15px 23px;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.photoDiv button:hover {
+    background-color: lightgray;
 }
