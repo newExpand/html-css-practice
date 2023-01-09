@@ -5,14 +5,23 @@
     margin: 0 auto;
 }
 
+.black-bg {
+    position: absolute;
+    width: 100%;
+    height: 1000px;
+    left: 0;
+    background-color: black;
+    z-index: 1;
+}
+
 /* header */
 
 header {
     position: relative;
-    background-color: black;
     text-align: center;
     padding-top: 20px;
     color: white;
+    z-index: 10;
 }
 
 .corona-link {
@@ -164,6 +173,7 @@ header {
     background-color: #ff385c;
     border-radius: 14px;
     text-align: center;
+    z-index: 10;
 }
 
 .notice p {
@@ -186,6 +196,7 @@ header {
 /* mainBanner */
 
 .main-banner {
+    position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -197,6 +208,8 @@ header {
     background-size: cover;
 
     border-radius: 14px;
+
+    z-index: 10;
 }
 
 .main-banner .content {
