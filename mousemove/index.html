@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <h1>x: <span id="x"></span>, y : <span id="y"></span></h1>
+    <div id="cursor"></div>
+    <div id="targetBox">
+        <div id="blind"></div>
+        <h1>안녕하세요! NewExpand입니다</h1>
+    </div>
+    <script>
+        window.addEventListener('mousemove', mouseMoving);
+
+        function mouseMoving(e) {
+            var x = document.getElementById('x');
+            var y = document.getElementById('y');
+            var cursor = document.getElementById('cursor');
+
+            x.innerText = e.clientX;
+            y.innerText = e.clientY;
+
+            cursor.style.transform = `translate(${e.clientX - 25}px ,${e.clientY - 25}px)`;
+        }
+
+        var targetBox = document.getElementById('targetBox');
+        var blind = document.getElementById('blind');
+
+        targetBox.addEventListener('mousemove', e => {
+            blind.style.transform = `translate(${e.clientX}px)`
+        })
+
+    </script>
+</body>
+
+</html>
